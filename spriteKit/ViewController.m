@@ -33,18 +33,18 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.picture = [[pictureStore alloc ]initWithImages];
+        // self.picture = [[pictureStore alloc ]initWithImages];
     
-        //UIImage *backgroundImage = [UIImage imageNamed:@"images/tj.png"];
+        UIImage *backgroundImage = [UIImage imageNamed:@"images/tj/tj.png"];
     
     
     
     CGRect backFrame = CGRectMake([[UIScreen mainScreen] bounds].size.width/2 - backgroundImage.size.width/2, [[UIScreen mainScreen] bounds].size.height/2 - backgroundImage.size.height/2, MIN([[UIScreen mainScreen] bounds].size.width, backgroundImage.size.width), MIN([[UIScreen mainScreen] bounds].size.height, backgroundImage.size.height));
     self.backgroundView = [[UIView alloc] initWithFrame:backFrame];
-    self.backgroundView.layer.contents =(__bridge id)[UIImage imageNamed:@"images/tj.png"].CGImage;
+    self.backgroundView.layer.contents =(__bridge id)[UIImage imageNamed:@"images/tj/tj.png"].CGImage;
     [self.view addSubview:self.backgroundView];
     
-    UIImage *cutoutImage = [UIImage imageNamed:@"images/tjcutout.png"];
+    UIImage *cutoutImage = [UIImage imageNamed:@"images/tj/tjcutout.png"];
 
     CGRect ballFrame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height/2 -138,cutoutImage.size.width, cutoutImage.size.height);
     self.ballView = [[UIView alloc] initWithFrame:ballFrame];
@@ -57,7 +57,7 @@
         // Better ball and paddle graphics
     self.ballView.layer.shadowOffset = CGSizeMake(5.0, 8.0);
     self.ballView.layer.shadowOpacity = 0.5;
-    self.ballView.layer.contents = (__bridge id)[UIImage imageNamed:@"images/tjcutout.png"].CGImage;
+    self.ballView.layer.contents = (__bridge id)[UIImage imageNamed:@"images/tj/tjcutout.png"].CGImage;
 
 }
 
