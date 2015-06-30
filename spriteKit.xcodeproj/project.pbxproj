@@ -15,6 +15,8 @@
 		665DC8861B424659002C19E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665DC8841B424659002C19E0 /* LaunchScreen.xib */; };
 		665DC8921B424659002C19E0 /* spriteKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 665DC8911B424659002C19E0 /* spriteKitTests.m */; };
 		665DC8A31B430F3E002C19E0 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 665DC8A21B430F3E002C19E0 /* images */; };
+		665DC8A61B4318BE002C19E0 /* pictureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 665DC8A51B4318BE002C19E0 /* pictureInfo.m */; };
+		665DC8A91B431926002C19E0 /* pictureStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 665DC8A81B431926002C19E0 /* pictureStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		665DC8901B424659002C19E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		665DC8911B424659002C19E0 /* spriteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spriteKitTests.m; sourceTree = "<group>"; };
 		665DC8A21B430F3E002C19E0 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		665DC8A41B4318BE002C19E0 /* pictureInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictureInfo.h; sourceTree = "<group>"; };
+		665DC8A51B4318BE002C19E0 /* pictureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pictureInfo.m; sourceTree = "<group>"; };
+		665DC8A71B431926002C19E0 /* pictureStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictureStore.h; sourceTree = "<group>"; };
+		665DC8A81B431926002C19E0 /* pictureStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pictureStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				665DC87A1B424658002C19E0 /* AppDelegate.m */,
 				665DC87C1B424658002C19E0 /* ViewController.h */,
 				665DC87D1B424658002C19E0 /* ViewController.m */,
+				665DC8A71B431926002C19E0 /* pictureStore.h */,
+				665DC8A81B431926002C19E0 /* pictureStore.m */,
+				665DC8A41B4318BE002C19E0 /* pictureInfo.h */,
+				665DC8A51B4318BE002C19E0 /* pictureInfo.m */,
 				665DC87F1B424659002C19E0 /* Main.storyboard */,
 				665DC8821B424659002C19E0 /* Images.xcassets */,
 				665DC8841B424659002C19E0 /* LaunchScreen.xib */,
@@ -223,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665DC8A61B4318BE002C19E0 /* pictureInfo.m in Sources */,
+				665DC8A91B431926002C19E0 /* pictureStore.m in Sources */,
 				665DC87E1B424658002C19E0 /* ViewController.m in Sources */,
 				665DC87B1B424658002C19E0 /* AppDelegate.m in Sources */,
 				665DC8781B424658002C19E0 /* main.m in Sources */,

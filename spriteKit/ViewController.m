@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "pictureStore.h"
 
 
 @interface ViewController() <UICollisionBehaviorDelegate>
@@ -18,7 +19,7 @@
 @property (nonatomic, strong) UICollisionBehavior *collider;
 @property (nonatomic, strong) UIDynamicItemBehavior *ballDynamicProperties;
 @property (nonatomic, strong) UIAttachmentBehavior *attacher;
-    //@property (nonatomic, strong) picture* picture;
+    //@property (nonatomic, strong) pictureStore* picture;
 
 @end
 
@@ -32,8 +33,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.picture = [[pictureStore alloc ]initWithImages];
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"images/tj.png"];
+        //UIImage *backgroundImage = [UIImage imageNamed:@"images/tj.png"];
     
     
     
