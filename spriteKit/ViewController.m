@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UICollisionBehavior *collider;
 @property (nonatomic, strong) UIDynamicItemBehavior *ballDynamicProperties;
 @property (nonatomic, strong) UIAttachmentBehavior *attacher;
+    //@property (nonatomic, strong) picture* picture;
 
 @end
 
@@ -32,16 +33,18 @@
 {
     [super viewWillAppear:animated];
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"firstpic.jpeg"];
+    UIImage *backgroundImage = [UIImage imageNamed:@"images/tj.png"];
     
-    CGRect backFrame = CGRectMake([[UIScreen mainScreen] bounds].size.width/2 - backgroundImage.size.width/2, [[UIScreen mainScreen] bounds].size.height/2 - backgroundImage.size.height/2, backgroundImage.size.width, backgroundImage.size.height);
+    
+    
+    CGRect backFrame = CGRectMake([[UIScreen mainScreen] bounds].size.width/2 - backgroundImage.size.width/2, [[UIScreen mainScreen] bounds].size.height/2 - backgroundImage.size.height/2, MIN([[UIScreen mainScreen] bounds].size.width, backgroundImage.size.width), MIN([[UIScreen mainScreen] bounds].size.height, backgroundImage.size.height));
     self.backgroundView = [[UIView alloc] initWithFrame:backFrame];
-    self.backgroundView.layer.contents =(__bridge id)[UIImage imageNamed:@"firstpic.jpeg"].CGImage;
+    self.backgroundView.layer.contents =(__bridge id)[UIImage imageNamed:@"images/tj.png"].CGImage;
     [self.view addSubview:self.backgroundView];
     
-    UIImage *cutoutImage = [UIImage imageNamed:@"firstbox.jpeg"];
+    UIImage *cutoutImage = [UIImage imageNamed:@"images/tjcutout.png"];
 
-    CGRect ballFrame = CGRectMake(0, 0,cutoutImage.size.width, cutoutImage.size.height);
+    CGRect ballFrame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height/2 -138,cutoutImage.size.width, cutoutImage.size.height);
     self.ballView = [[UIView alloc] initWithFrame:ballFrame];
     [self.view addSubview:self.ballView];
     
@@ -52,7 +55,7 @@
         // Better ball and paddle graphics
     self.ballView.layer.shadowOffset = CGSizeMake(5.0, 8.0);
     self.ballView.layer.shadowOpacity = 0.5;
-    self.ballView.layer.contents = (__bridge id)[UIImage imageNamed:@"firstbox.jpeg"].CGImage;
+    self.ballView.layer.contents = (__bridge id)[UIImage imageNamed:@"images/tjcutout.png"].CGImage;
 
 }
 
@@ -70,10 +73,10 @@
         // Start ball off with a push
     self.pusher = [[UIPushBehavior alloc] initWithItems:@[self.ballView]
                                                    mode:UIPushBehaviorModeInstantaneous];
-    self.pusher.pushDirection = CGVectorMake(0.7, 1.0);
+    self.pusher.pushDirection = CGVectorMake(1, 0);
         //Add speed
     
-        //self.pusher.magnitude = SPEED;
+        self.pusher.magnitude = 01;
     self.pusher.active = YES; // Because push is instantaneous, it will only happen once
     [self.animator addBehavior:self.pusher];
     
@@ -90,8 +93,6 @@
     self.ballDynamicProperties.allowsRotation = NO;
     [self.animator addBehavior:self.ballDynamicProperties];
     
-    
-    
         // Step 4: Better collisions, no friction
     self.ballDynamicProperties.elasticity = 1.0;
     self.ballDynamicProperties.friction = 0.0;
@@ -101,7 +102,14 @@
 
 - (void)tapped:(UIGestureRecognizer *)gr
 {
-    CGPoint point = [self.ballView.superview convertPoint:self.ballView.center toView:self.view];
+    
+    CGPoint point = [self.ballView.superview convertPoint:self.ballView.frame.origin toView:self.view];
+    NSLog(@"%f", point.x);
+    if(abs(point.x - 198) < 10) {
+        NSLog(@"YOU WON");
+    }
+    
+ 
     self.animator = nil;
 }
 

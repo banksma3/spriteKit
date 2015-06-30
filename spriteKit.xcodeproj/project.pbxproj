@@ -14,6 +14,7 @@
 		665DC8831B424659002C19E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665DC8821B424659002C19E0 /* Images.xcassets */; };
 		665DC8861B424659002C19E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665DC8841B424659002C19E0 /* LaunchScreen.xib */; };
 		665DC8921B424659002C19E0 /* spriteKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 665DC8911B424659002C19E0 /* spriteKitTests.m */; };
+		665DC8A31B430F3E002C19E0 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 665DC8A21B430F3E002C19E0 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		665DC88B1B424659002C19E0 /* spriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spriteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665DC8901B424659002C19E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		665DC8911B424659002C19E0 /* spriteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spriteKitTests.m; sourceTree = "<group>"; };
+		665DC8A21B430F3E002C19E0 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				665DC87F1B424659002C19E0 /* Main.storyboard */,
 				665DC8821B424659002C19E0 /* Images.xcassets */,
 				665DC8841B424659002C19E0 /* LaunchScreen.xib */,
+				665DC8A21B430F3E002C19E0 /* images */,
 				665DC8751B424658002C19E0 /* Supporting Files */,
 			);
 			path = spriteKit;
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665DC8A31B430F3E002C19E0 /* images in Resources */,
 				665DC8811B424659002C19E0 /* Main.storyboard in Resources */,
 				665DC8861B424659002C19E0 /* LaunchScreen.xib in Resources */,
 				665DC8831B424659002C19E0 /* Images.xcassets in Resources */,
@@ -350,6 +354,7 @@
 				INFOPLIST_FILE = spriteKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +365,7 @@
 				INFOPLIST_FILE = spriteKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -416,6 +422,7 @@
 				665DC8971B424659002C19E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		665DC8981B424659002C19E0 /* Build configuration list for PBXNativeTarget "spriteKitTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				665DC89A1B424659002C19E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
