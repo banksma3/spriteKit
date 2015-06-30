@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 @property (nonatomic, strong) UIPushBehavior *pusher;
 @property (nonatomic, strong) UICollisionBehavior *collider;
-@property (nonatomic, strong) UIDynamicItemBehavior *paddleDynamicProperties;
 @property (nonatomic, strong) UIDynamicItemBehavior *ballDynamicProperties;
 @property (nonatomic, strong) UIAttachmentBehavior *attacher;
 
