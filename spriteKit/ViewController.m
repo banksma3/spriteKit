@@ -114,6 +114,20 @@
     self.pusher = nil;
 }
 
+- (void)reset
+{
+    [self.animator removeAllBehaviors];
+    self.collider = nil;
+    self.pusher = nil;
+    self.ballDynamicProperties = nil;
+    self.attacher = nil;
+    
+    self.ballView.frame = CGRectMake(100.0, 100.0, 64.0, 64.0);
+    
+    [self initBehaviors];
+}
+
+
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
