@@ -71,6 +71,9 @@
     self.pusher = [[UIPushBehavior alloc] initWithItems:@[self.ballView]
                                                    mode:UIPushBehaviorModeInstantaneous];
     self.pusher.pushDirection = CGVectorMake(0.7, 1.0);
+        //Add speed
+    
+        //self.pusher.magnitude = SPEED;
     self.pusher.active = YES; // Because push is instantaneous, it will only happen once
     [self.animator addBehavior:self.pusher];
     
